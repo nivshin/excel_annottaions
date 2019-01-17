@@ -12,11 +12,10 @@ public interface ExcelParser {
      * Fills in the target by its annotations
      * @param srcFile
      * @param target
-     * @param format
      * @throws FileImportException
      * @return investigated grid offset area
      */
-    <T> InvestigatedArea extract(Path srcFile, T target, ExcelFileFormat format)
+    <T> InvestigatedArea extract(Path srcFile, T target)
             throws FileImportException, IllegalAccessException, InvalidFormatException, IOException;
 
     /**
@@ -24,12 +23,11 @@ public interface ExcelParser {
      * @param srcFile
      * @param target
      * @param offsetArea
-     * @param format
      * @throws FileImportException
      * @return new grid offset area
      * @throws FileImportException
      */
-    <T> InvestigatedArea extract(Path srcFile, T target, InvestigatedArea offsetArea, ExcelFileFormat format)
+    <T> InvestigatedArea extract(Path srcFile, T target, InvestigatedArea offsetArea)
             throws FileImportException, IOException, InvalidFormatException, IllegalAccessException;
 
 }

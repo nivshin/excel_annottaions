@@ -422,7 +422,7 @@ public class ExcelParserImpl implements ExcelParser {
     @SuppressWarnings("PMD.AvoidCatchingGenericException")
     @Override
     public <T> InvestigatedArea extract(
-            final Path filePath, final T target, final InvestigatedArea offsetArea, final ExcelFileFormat format)
+            final Path filePath, final T target, final InvestigatedArea offsetArea)
             throws FileImportException, IOException, InvalidFormatException, IllegalAccessException {
 
         if (!Files.exists(filePath)) {
@@ -443,9 +443,9 @@ public class ExcelParserImpl implements ExcelParser {
     }
 
     @Override
-    public <T> InvestigatedArea extract(final Path filePath, final T target, final ExcelFileFormat format)
+    public <T> InvestigatedArea extract(final Path filePath, final T target)
             throws FileImportException, IllegalAccessException, InvalidFormatException, IOException {
         InvestigatedArea area = new InvestigatedArea();
-        return extract(filePath, target, area, format);
+        return extract(filePath, target, area);
     }
 }

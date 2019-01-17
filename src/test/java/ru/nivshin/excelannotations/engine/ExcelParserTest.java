@@ -51,7 +51,7 @@ public class ExcelParserTest {
             ClassLoader classLoader = getClass().getClassLoader();
             Path file = new File(classLoader.getResource(test.fileName).getFile()).toPath();
             Worksheet0Grid worksheetObject = new Worksheet0Grid();
-            InvestigatedArea area = excelParser.extract(file, worksheetObject, test.format);
+            InvestigatedArea area = excelParser.extract(file, worksheetObject);
 
             assertThat(area.getUpperLeftX()).isEqualTo(1);
             assertThat(area.getBottomRightX()).isEqualTo(44);
@@ -80,7 +80,7 @@ public class ExcelParserTest {
             Path file = new File(classLoader.getResource(test.fileName).getFile()).toPath();
 
             Worksheet1Grid1 firstWorksheetObject = new Worksheet1Grid1();
-            InvestigatedArea area = excelParser.extract(file, firstWorksheetObject, test.format);
+            InvestigatedArea area = excelParser.extract(file, firstWorksheetObject);
             assertThat(area.getUpperLeftX()).isEqualTo(1);
             assertThat(area.getBottomRightX()).isEqualTo(44);
             assertThat(area.getUpperLeftY()).isEqualTo(0);
@@ -90,14 +90,14 @@ public class ExcelParserTest {
                     new Class<?>[]{String.class, Date.class}, new Class<?>[]{String.class, Double.class});
 
             UnnecessaryWorksheet1Grid2 toSkip = new UnnecessaryWorksheet1Grid2();
-            area = excelParser.extract(file, toSkip, area, test.format);
+            area = excelParser.extract(file, toSkip, area);
             assertThat(area.getUpperLeftX()).isEqualTo(1);
             assertThat(area.getBottomRightX()).isEqualTo(44);
             assertThat(area.getUpperLeftY()).isEqualTo(0);
             assertThat(area.getBottomRightY()).isEqualTo(32);
 
             Worksheet1Grid3 secondWorksheetObject = new Worksheet1Grid3();
-            area = excelParser.extract(file, secondWorksheetObject, area, test.format);
+            area = excelParser.extract(file, secondWorksheetObject, area);
             assertThat(area.getUpperLeftX()).isEqualTo(1);
             assertThat(area.getBottomRightX()).isEqualTo(44);
             assertThat(area.getUpperLeftY()).isEqualTo(0);

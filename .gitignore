@@ -5,3 +5,4 @@
 **/logs
 **/settings.xml
 effective-pom.xml
+*.sh

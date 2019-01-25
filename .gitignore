@@ -3,3 +3,7 @@
 **/*.iml
 **/qalab.xml
 **/logs
+**/settings.xml
+effective-pom.xml
+*.sh
+*key.txt

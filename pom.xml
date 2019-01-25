@@ -8,7 +8,7 @@
     </parent>
     <groupId>io.github.nivshin</groupId>
     <artifactId>excelannotations</artifactId>
-    <version>0.1.1</version>
+    <version>0.1.2-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>excel-annotations</name>
@@ -36,7 +36,7 @@
         <connection>${scm.connection}</connection>
         <url>${scm.url}</url>
         <developerConnection>${scm.connection}</developerConnection>
-        <tag>excelannotations-0.1.1</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <developers>

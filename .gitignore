@@ -6,3 +6,4 @@
 **/settings.xml
 effective-pom.xml
 *.sh
+*key.txt

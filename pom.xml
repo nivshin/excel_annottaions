@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.sonatype.oss</groupId>
@@ -9,7 +8,7 @@
     </parent>
     <groupId>io.github.nivshin</groupId>
     <artifactId>excelannotations</artifactId>
-    <version>0.1.1-SNAPSHOT</version>
+    <version>0.1.1</version>
     <packaging>jar</packaging>
 
     <name>excel-annotations</name>
@@ -21,8 +20,8 @@
         <java.version>1.8</java.version>
         <scm.connection>scm:git:https://github.com/nivshin/excel_annottaions.git</scm.connection>
         <scm.url>https://github.com/nivshin/excel_annottaions</scm.url>
-        <gpg.keyname/>
-        <gpg.passphrase/>
+        <gpg.keyname />
+        <gpg.passphrase />
     </properties>
 
     <licenses>
@@ -37,7 +36,7 @@
         <connection>${scm.connection}</connection>
         <url>${scm.url}</url>
         <developerConnection>${scm.connection}</developerConnection>
-        <tag>HEAD</tag>
+        <tag>excelannotations-0.1.1</tag>
     </scm>
 
     <developers>
